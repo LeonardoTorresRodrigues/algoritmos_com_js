@@ -1,6 +1,6 @@
 # Algoritmos de Ordenação
 
-Algoritmo de ordenação para organizar os livros por preço
+Programa para organizar os livros por preço
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
