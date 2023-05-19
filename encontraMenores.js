@@ -11,7 +11,6 @@ function encontraMenores(pivo, array) {
   });
 
   trocaLugar(array, array.indexOf(pivo), menores);
-
   return array;
 }
 
@@ -40,7 +39,7 @@ function divideNoPivo(array) {
   return array;
 }
 
-console.log(divideNoPivo(novaListaLivros));
+//console.log(divideNoPivo(novaListaLivros));
 //console.log(encontraMenores(novaListaLivros[2], novaListaLivros));
 
 module.exports = trocaLugar;
