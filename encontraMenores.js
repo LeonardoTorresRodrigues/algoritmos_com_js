@@ -8,7 +8,7 @@ function encontraMenores(pivo, array) {
     if (produtoAtual.preco < pivo.preco) {
       menores++;
     }
-  })
+  });
 
   trocaLugar(array, array.indexOf(pivo), menores);
 
@@ -23,4 +23,22 @@ function trocaLugar(array, de, para) {
   array[de] = elem2;
 }
 
-console.log(encontraMenores(novaListaLivros[2], novaListaLivros));
+function divideNoPivo(array) {
+  let pivo = array[Math.floor(array.length / 2)];
+  encontraMenores(pivo, array);
+  let valoresMenores = 0;
+
+  array.forEach((_, i) => {
+    let atual = array[i];
+
+    if (atual.preco <= pivo.preco && atual !== pivo) {
+      trocaLugar(array, i, valoresMenores);
+      valoresMenores++;
+    }
+  });
+
+  return array;
+}
+
+console.log(divideNoPivo(novaListaLivros));
+//console.log(encontraMenores(novaListaLivros[2], novaListaLivros));
